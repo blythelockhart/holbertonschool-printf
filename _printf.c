@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 	};
 
 	va_list args;
-	int i = 0, j, len = 0;
+	int i = 0, ii, len = 0;
 	/**
 	 * 'args' to handle the variable num of args given
 	 * variables given to help iterate throughout the
@@ -41,12 +41,12 @@ int _printf(const char *format, ...)
 Here:
 	while (format[i] != '\0')
 	{
-		j = 4;
-		while (j >= 0)
+		ii = 4;
+		while (ii >= 0)
 		{
-			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
+			if (m[ii].id[0] == format[i] && m[ii].id[1] == format[i + 1])
 			{
-				len += m[j].f(args);
+				len += m[ii].f(args);
 				i = i + 2;
 				goto Here;
 			}
