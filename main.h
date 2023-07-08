@@ -6,6 +6,19 @@
 #include <stdarg.h>
 #include <limits.h>
 
+typedef struct format
+{
+	char *id;
+	int (*f)();
+} convert_match;
+
+/**
+* struct format - match the conversion specifiers to args passed
+* @id: pointer to format specifer, i.e. id[0] = % and id[1] is the letter (c, s, d, i)
+* @f: pointer to function determined by the conversion specifier
+*
+*/
+
 int _putchar(char c);
 int _printf(const char *format, ...);
 int printf_char(va_list val);
