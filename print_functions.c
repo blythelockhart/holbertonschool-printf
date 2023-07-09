@@ -56,7 +56,7 @@ int printf_int(va_list args)
 {
 	long int n = va_arg(args, int);
 	long int num;
-	int len = 0, digit = 1;
+	int len = 0, digit = 1, end = n % 10, unit;
 
 	if (n < 0)
 	{
@@ -64,22 +64,20 @@ int printf_int(va_list args)
 		_putchar('-');
 		len++;
 	}
-	if (n <= 9)
+	num = n
+	while (num / 10 != 0)
 	{
-		_putchar(n + '0');
-		len++;
-	}
-	num = n;
-	while (num > 9)
-	{
-		num /= 10;
-		digit *= 10;
+		digit = digit * 10;
+		num = num / 10;
 	}
 	while (digit >= 1)
 	{
-		_putchar(((num / digit) % 10) + '0');
-		digit /= 10;
+		unit = num / digit;
+		_putchar(unit + '0');
+		num = num - (unit * digit);
+		digit = digit / 10;
 		len++;
 	}
+	_putchar(end + '0');
 	return (len);
 }
