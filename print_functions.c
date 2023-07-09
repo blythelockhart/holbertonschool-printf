@@ -61,7 +61,7 @@ int printf_int(va_list args)
 	n = n / 10;
 	num = n;
 
-	if (n < 0)
+	if (end < 0)
 	{
 		_putchar('-');
 		n *= -1;
