@@ -54,11 +54,10 @@ int printf_37(void)
  */
 int printf_int(va_list args)
 {
-	int n = va_arg(args, int);
-	int num, unit, digit = 1;
-	int end = n % 10, len = 1;
+	long int n = va_arg(args, int);
+	long int num;
+	int len = 0, digit = 1, unit;
 
-	n /= 10;
 	num = n;
 	if (end < 0)
 	{
@@ -68,23 +67,19 @@ int printf_int(va_list args)
 		end *= -1;
 		len++;
 	}
-	if (n > 0)
+	while (num >= 10)
 	{
-		while (num >= 10)
-		{
-			digit = digit * 10;
-			num = num / 10;
-		}
-		num = n;
-		while (digit >= 1)
-		{
-			unit = num / digit;
-			_putchar(unit + '0');
-			num = num - (unit * digit);
-			digit = digit / 10;
-			len++;
-		}
+		digit = digit * 10;
+		num = num / 10;
 	}
-	_putchar(end + '0');
+	num = n;
+	while (digit >= 1)
+	{
+		unit = num / digit;
+		_putchar(unit + '0');
+		num = num - (unit * digit);
+		digit = digit / 10;
+		len++;
+	}
 	return (len);
 }
