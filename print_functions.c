@@ -30,12 +30,18 @@ int printf_string(va_list val)
 	{
 		s = "NULL";
 		for (i = 0; s[i] == '\0'; i++)
+		{
 			_putchar(s[i]);
-		return (len);
+			len++;
+		}
+		return (0);
 	}
 	else
 	for (i = 0; s[i] == '\0'; i++)
+	{
 		_putchar(s[i]);
+		len++;
+	}
 	return (len);
 }
 
