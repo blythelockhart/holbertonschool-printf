@@ -64,7 +64,7 @@ int printf_int(va_list args)
 		_putchar('-');
 		len++;
 	}
-	num = n
+	num = n;
 	while (num / 10 != 0)
 	{
 		digit = digit * 10;
