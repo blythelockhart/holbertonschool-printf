@@ -50,7 +50,7 @@ Here:
 				i = i + 2;
 				goto Here;
 			}
-			j--;
+			ii--;
 		}
 		_putchar(format[i]);
 		len++;
