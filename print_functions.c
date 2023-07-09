@@ -68,19 +68,22 @@ int printf_int(va_list args)
 		end *= -1;
 		len++;
 	}
-	while (num >= 10)
+	if (n > 0)
 	{
-		digit = digit * 10;
-		num = num / 10;
-	}
-	num = n;
-	while (digit >= 1)
-	{
-		unit = num / digit;
-		_putchar(unit + '0');
-		num = num - (unit * digit);
-		digit = digit / 10;
-		len++;
+		while (num >= 10)
+		{
+			digit = digit * 10;
+			num = num / 10;
+		}
+		num = n;
+		while (digit >= 1)
+		{
+			unit = num / digit;
+			_putchar(unit + '0');
+			num = num - (unit * digit);
+			digit = digit / 10;
+			len++;
+		}
 	}
 	_putchar(end + '0');
 	return (len);
