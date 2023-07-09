@@ -65,18 +65,21 @@ int printf_int(va_list args)
 		len++;
 	}
 	num = n;
-	while (num / 10 != 0)
+	if (n > 0)
 	{
-		digit = digit * 10;
-		num = num / 10;
-	}
-	while (digit >= 1)
-	{
-		unit = num / digit;
-		_putchar(unit + '0');
-		num = num - (unit * digit);
-		digit = digit / 10;
-		len++;
+		while (num / 10 != 0)
+		{
+			digit = digit * 10;
+			num = num / 10;
+		}
+		while (digit > 0)
+		{
+			unit = num / digit;
+			_putchar(unit + '0');
+			num = num - (unit * digit);
+			digit = digit / 10;
+			len++;
+		}
 	}
 	_putchar(end + '0');
 	return (len);
