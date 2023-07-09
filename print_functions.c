@@ -78,7 +78,7 @@ int printf_int(va_list args)
 	while (exp != 0)
 	{
 		_putchar(n / exp);
-		n %= exp;
+		n = n % exp;
 		exp /= 10;
 		len++;
 	}
