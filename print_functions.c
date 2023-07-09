@@ -54,9 +54,9 @@ int printf_37(void)
  */
 int printf_int(va_list args)
 {
-	long int n = va_arg(args, int);
-	long int num;
-	int end = n % 10, unit, digit = 1, len = 1;
+	int n = va_arg(args, int);
+	int num, unit, digit = 1;
+	int end = n % 10, len = 1;
 
 	n = n / 10;
 	num = n;
