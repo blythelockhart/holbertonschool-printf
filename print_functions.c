@@ -56,7 +56,7 @@ int printf_int(va_list args)
 {
 	int n = va_arg(args, int);
 	int num, unit, digit = 1;
-	int end = n % 10, len = 1;
+	int end = n % 10, len = 0;
 
 	num = n;
 	if (end < 0)
