@@ -13,9 +13,12 @@ typedef struct format
 } convert_match;
 
 /**
-* struct format - match the conversion specifiers to args passed
-* @id: pointer to format specifer, i.e. id[0] = % and id[1] is the letter (c, s, d, i)
-* @f: pointer to function determined by the conversion specifier
+* struct format - match the conversion specifiers to args
+* passed
+* @id: pointer to format specifer, i.e. id[0] = % and id[1]
+* is the letter (c, s, d, i)
+* @f: pointer to function determined by the conversion
+* specifier
 *
 */
 
@@ -25,6 +28,5 @@ int printf_char(va_list val);
 int printf_string(va_list val);
 int printf_37(void);
 int printf_int(va_list args);
-int printf_dec(va_list args);
 
 #endif
