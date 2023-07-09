@@ -78,12 +78,12 @@ int printf_int(va_list args)
 		while (digit >= 1)
 		{
 			unit = num / digit;
-			_putchar(unit);
+			_putchar(unit + '0');
 			num = num - (unit * digit);
 			digit = digit / 10;
 			len++;
 		}
 	}
-	_putchar(end);
+	_putchar(end + '0');
 	return (len);
 }
