@@ -8,9 +8,7 @@
  */
 int printf_char(va_list val)
 {
-	char s;
-
-	s = va_arg(val, int);
+	char s = va_arg(val, int);
 	_putchar(s);
 	return (1);
 }
@@ -32,7 +30,7 @@ int printf_string(va_list val)
  */
 int printf_37(void)
 {
-	_putchar(37);
+	_putchar('%');
 	return (1);
 }
 
@@ -43,6 +41,28 @@ int printf_37(void)
  */
 int printf_int(va_list args)
 {
+	int n = va_arg(args, int);
+	int len = 0, exp = 1;
+
+	if (n < 0)
+	{
+		n = -n;
+		_putchar('-');
+		len++;
+	}
+	else
+
+	while (n / exp > 9)
+		exp *= 10;
+
+	while (exp != 0)
+	{
+		_putchar(n / exp);
+		n %= exp;
+		exp /= 10;
+		len++;
+	}
+	return (len);
 }
 
 /**
