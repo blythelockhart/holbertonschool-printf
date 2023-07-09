@@ -26,7 +26,7 @@ int printf_string(va_list val)
 	int len = 0;
 
 	s = va_arg(val, char *);
-	if (s == NULL)
+	if (!s)
 		s = "(null)";
 	while (s[len])
 	{
