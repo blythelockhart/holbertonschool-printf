@@ -23,23 +23,14 @@ int printf_char(va_list val)
 int printf_string(va_list val)
 {
 	char *s;
-	int i, len;
-
+	int len;
 	s = va_arg(val, char *);
+
 	if (s == NULL)
+		s = "(null)";
+	while (s[len])
 	{
-		s = "NULL";
-		for (i = 0; s[i] == '\0'; i++)
-		{
-			_putchar(s[i]);
-			len++;
-		}
-		return (0);
-	}
-	else
-	for (i = 0; s[i] == '\0'; i++)
-	{
-		_putchar(s[i]);
+		_putchar(s[len]);
 		len++;
 	}
 	return (len);
