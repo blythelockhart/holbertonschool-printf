@@ -58,15 +58,13 @@ int printf_int(va_list args)
 	long int num;
 	int len = 0, digit = 1, unit;
 
-	num = n;
-	if (end < 0)
+	if (n < 0)
 	{
 		_putchar('-');
 		n *= -1;
-		num *= -1;
-		end *= -1;
 		len++;
 	}
+	num = n;
 	while (num >= 10)
 	{
 		digit = digit * 10;
