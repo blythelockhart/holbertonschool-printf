@@ -32,6 +32,8 @@ int printf_string(va_list val)
  */
 int printf_37(void)
 {
+	_putchar(37);
+	return (1);
 }
 
 /**
