@@ -9,6 +9,7 @@
 int printf_char(va_list val)
 {
 	char s = va_arg(val, int);
+
 	_putchar(s);
 	return (1);
 }
@@ -21,6 +22,21 @@ int printf_char(va_list val)
  */
 int printf_string(va_list val)
 {
+	char *s;
+	int i, len;
+
+	s = va_arg(val, char *);
+	if (s == NULL)
+	{
+		s = "NULL";
+		for (i = 0; s[i] == '\0'; i++)
+			_putchar(s[i]);
+		return (len);
+	}
+	else
+	for (i = 0; s[i] == '\0'; i++)
+		_putchar(s[i]);
+	return (len);
 }
 
 /**
@@ -51,10 +67,8 @@ int printf_int(va_list args)
 		len++;
 	}
 	else
-
 	while (n / exp > 9)
 		exp *= 10;
-
 	while (exp != 0)
 	{
 		_putchar(n / exp);
