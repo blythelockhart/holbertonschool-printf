@@ -23,9 +23,9 @@ int printf_char(va_list val)
 int printf_string(va_list val)
 {
 	char *s;
-	int len;
-	s = va_arg(val, char *);
+	int len = 0;
 
+	s = va_arg(val, char *);
 	if (s == NULL)
 		s = "(null)";
 	while (s[len])
@@ -63,7 +63,6 @@ int printf_int(va_list args)
 		_putchar('-');
 		len++;
 	}
-	else
 	while (n / exp > 9)
 		exp *= 10;
 	while (exp != 0)
