@@ -58,6 +58,7 @@ int printf_int(va_list args)
 	int num, unit, digit = 1;
 	int end = n % 10, len = 0;
 
+	n /= 10;
 	num = n;
 	if (end < 0)
 	{
@@ -81,5 +82,6 @@ int printf_int(va_list args)
 		digit = digit / 10;
 		len++;
 	}
+	_putchar(end + '0');
 	return (len);
 }
