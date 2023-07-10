@@ -1,5 +1,5 @@
 
-<h1><b> Slim-printf: A Lighter Formatted Output Solution </b></h1>
+<h1><b>Custom printf</b></h1>
 
 <b>Description</b>
 
