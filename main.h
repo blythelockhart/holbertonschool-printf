@@ -6,12 +6,6 @@
 #include <stdarg.h>
 #include <limits.h>
 
-typedef struct format
-{
-	char *id;
-	int (*f)();
-} convert_match;
-
 /**
 * struct format - match the conversion specifiers to args
 * passed
@@ -21,6 +15,12 @@ typedef struct format
 * specifier
 *
 */
+
+typedef struct format
+{
+	char *id;
+	int (*f)();
+} convert_match;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
