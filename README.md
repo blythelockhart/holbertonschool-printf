@@ -12,7 +12,7 @@ When a string and any number of arguments are passed to `_printf`, the string wi
 <b>Flowchart</b>
 
 Flowchart of what `_printf` is doing under the hood:
-![Screenshot]
+![Screenshot](../_printf_flowchart.png)
 
 <b>Authors</b>
 
