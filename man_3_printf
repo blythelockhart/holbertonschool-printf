@@ -1,0 +1,10 @@
+.Dd July 10, 2023
+.Dt _PRINTF 1
+.Sh NAME
+.Nm _printf
+.Nd format and print data
+.Sh SYNOPSIS
+.Nm _printf
+.Ar FORMAT
+.Sh DESCRIPTION
+.Sh AUTHOR
