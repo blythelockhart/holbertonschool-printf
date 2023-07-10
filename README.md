@@ -16,7 +16,7 @@ Flowchart of what `_printf` is doing under the hood:
 
 <b>Authors</b>
 
-* Blythe Lockart <[bdbaraban](https://github.com/blythelockhart)>
+* Blythe Lockart <[blythelockart](https://github.com/blythelockhart)>
 * Dillon Gage <[dillonjgage](https://github.com/dillonjgage)>
 
 <b>Acknowledgements</b>
