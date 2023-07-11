@@ -1,10 +1,48 @@
-.Dd July 10, 2023
-.Dt _PRINTF 1
-.Sh NAME
-.Nm _printf
-.Nd format and print data
-.Sh SYNOPSIS
-.Nm _printf
-.Ar FORMAT
-.Sh DESCRIPTION
-.Sh AUTHOR
+.TH _PRINTF 3 "JULY 2023" Holberton "Student Manuals"
+.SH NAME
+.B _printf
+- format and print data
+.SH SYNOPSIS
+.P
+.B #include
+"main.h"
+.P
+.BR int\ _printf(const\ char\ *format,\ ...);
+.P
+.B _printf
+.IR [ARGUMENT]...
+.SH DESCRIPTION
+The function
+.B _printf()
+writes output to stdout under the control of a format
+string that specifies how subsequent arguments are
+converted for output.
+.SS "Format of the format string"
+The format string is a character string, beginning and
+ending in its initial shift state, if any. The format
+string is composed of zero or more directives: ordinary
+characters (not %), which are copied unchanged to the
+output stream; and conversion specifications, each of
+which results in fetching zero or more subsequent
+arguments. Each conversion specification is introduced by
+the character %, and ends with a conversion specifier.
+.SS "Conversion specifiers"
+A character that specifies the type of conversion to be
+applied. The conversion specifiers and their meanings are:
+.TP
+.BR %%
+prints '%' as a character
+.TP
+.BR %c
+prints a character
+.TP
+.BR %s
+prints a string of characters
+.TP
+.BR %d ", " %i
+prints an integer in decimal
+.SH EXAMPLE
+.BR _printf
+("%cello, %s", H, World!)
+.SH AUTHOR
+.R "Written by Blythe Lockhart and Dillon Gage."
